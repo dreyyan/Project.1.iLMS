@@ -1,10 +1,3 @@
-// # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-// #        Project: iLMS(iSort Library Management System) #
-// #         Author: dreyyan                               #
-// #       Language: C++                                   #
-// #   Date Started: 10/29/2024                            #
-// #  Date Finished: 11/01/2024                            #
-// # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 // Standard Library Headers
 #include <algorithm>
 #include <cctype>
@@ -106,7 +99,7 @@ void displayHeader() {
 void displayFormat(size_t iterations) {
     for (size_t i = 0; i < iterations; i++) {
         cout << '-';
-    }
+    } cout << '\n';
 }
 
 class Book { // Book Class
@@ -1897,7 +1890,7 @@ public:
     // >> Print Borrow History [10]
     void printBorrowHistory() {
         displayHeader();
-        cout << "_-_-_-_-_-_-_-_-[BORROW HISTORY]-_-_-_-_-_-_-_-_\n\n";
+        cout << "_-_-_-_-_-_-_-_-[BORROW HISTORY]-_-_-_-_-_-_-_-_\n";
         sleepAnimation(100);
 
         // Read Borrow History
@@ -1906,10 +1899,8 @@ public:
             string line;
 
             displayFormat(49);
-            cout << '\n';
             cout << "Book Title " << right << setw(26) << "[0000000000]" << "        Date" << "\n";
             displayFormat(49);
-            cout << '\n';
 
             while (getline(borrowHistory, line)) {
                 // Parse the line
@@ -1934,13 +1925,12 @@ public:
         }
 
         displayFormat(49);
-        cout << '\n';
     }
 
     // >> Print Return History [11]
     void printReturnHistory() {
         displayHeader();
-        cout << "_-_-_-_-_-_-_-_-[RETURN HISTORY]-_-_-_-_-_-_-_-_\n\n";
+        cout << "_-_-_-_-_-_-_-_-[RETURN HISTORY]-_-_-_-_-_-_-_-_\n";
         sleepAnimation(100);
 
         // Read Return History
@@ -1950,10 +1940,8 @@ public:
             string line;
 
             displayFormat(49);
-            cout << '\n';
             cout << "Book Title " << right << setw(26) << "[0000000000]" << "        Date" << "\n";
             displayFormat(49);
-            cout << '\n';
 
             while (getline(returnHistory, line)) {
                 // Parse the line
@@ -1978,7 +1966,6 @@ public:
         }
 
         displayFormat(49);
-        cout << '\n';
     }
 
     // >> Display Table Of Contents [12]
@@ -2517,8 +2504,6 @@ public:
             cout << "-_-_-_-_-_-_-_-_-[LIBRARY MENU]-_-_-_-_-_-_-_-_-\n" << flush;
             sleepAnimation(50);
             displayFormat(49);
-            sleepAnimation(50);
-            cout << '\n' << flush;
             sleepAnimation(50);
             cout << setw(9) << ' ' << " [1] | Create Book File\n" << flush;
             sleepAnimation(50);
