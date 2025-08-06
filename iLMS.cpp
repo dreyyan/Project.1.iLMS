@@ -1,4 +1,3 @@
-// Standard Library Headers
 #include <algorithm>
 #include <cctype>
 #include <chrono>
@@ -18,7 +17,7 @@
 #include <vector>
 using namespace std;
 
-// Current Time
+// Get Current Time
 time_t seconds = time(NULL);
 struct tm timeFormat = *localtime(&seconds);
 
@@ -29,17 +28,13 @@ map<string, unique_ptr<string>> bookList;
 map<unique_ptr<string>, unique_ptr<string>> borrowHistory;
 map<unique_ptr<string>, unique_ptr<string>> returnHistory;
 
-// Sleep/Delay Animation
+/* UTILITIES*/
+// UTILITY: Mimic a delay within `ms` milliseconds
 void sleepAnimation(int ms_delay) {
     this_thread::sleep_for(std::chrono::milliseconds(ms_delay));
 }
 
-void pressEnterToContinue() {
-    cout << "Press 'Enter' to continue...";
-    cin.get();
-}
-
-// Sleep/Delay Animation for ASCII Art
+// UTILITY: Mimic a line delay within `ms` milliseconds (for ASCII art animation)
 mutex MUTEX;
 void sleepAnimation(const string& line, int delay) {
     this_thread::sleep_for(chrono::milliseconds(delay));
@@ -47,6 +42,13 @@ void sleepAnimation(const string& line, int delay) {
     cout << line << '\n';
 }
 
+// UTLITY: Prompt user to Press 'Enter' key before proceeding
+void pressEnterToContinue() {
+    cout << "Press 'Enter' to continue...";
+    cin.get();
+}
+
+// UTILITY: Display ASCII art animation
 void ASCIIArtAnimation() {
     vector<string> asciiArt = {
         "                  ___       ___           ___     ",
@@ -82,13 +84,14 @@ void ASCIIArtAnimation() {
     system("cls");
 }
 
-// Loading Animation '...'
+// UTILITY: Mimic loading animation '...'
 void loadingAnimation(int ms_delay, size_t iterations) {
     for (size_t i = 0; i < iterations; i++) {
         cout << '.'; sleepAnimation(ms_delay);
     }
 }
 
+// UTILITY: Display TUI header
 void displayHeader() {
     cout << "+==+==+==+==+==+==+== iSort ==+==+==+==+==+==+==+\n" << flush;
     sleepAnimation(100);
@@ -96,11 +99,13 @@ void displayHeader() {
     sleepAnimation(100);
 }
 
+// UTILITY: Dispaly TUI formatting
 void displayFormat(size_t iterations) {
     for (size_t i = 0; i < iterations; i++) {
         cout << '-';
     } cout << '\n';
 }
+
 
 class Book { // Book Class
 protected:
