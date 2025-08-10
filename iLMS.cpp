@@ -51,17 +51,17 @@ void pressEnterToContinue() {
 // UTILITY: Display ASCII art animation
 void ASCIIArtAnimation() {
     vector<string> asciiArt = {
-        "                  ___       ___           ___     ",
-        "      ___        /\\__\\     /\\__\\         /\\  \\    ",
-        "     /\\  \\      /:/  /    /::|  |       /::\\  \\   ",
-        "     \\:\\  \\    /:/  /    /:|:|  |      /:/\\ \\  \\  ",
-        "     /::\\__\\  /:/  /    /:/|:|__|__   _\\:\\~\\ \\  \\ ",
-        "  __/:/\\/__/ /:/__/    /:/ |::::\\__\\ /\\ \\:\\ \\ \\__\\",
-        " /\\/:/  /    \\:\\  \\    \\/__/~~/:/  / \\:\\ \\:\\ \\/__/",
-        " \\::/__/      \\:\\  \\         /:/  /   \\:\\ \\:\\__\\  ",
-        "  \\:\\__\\       \\:\\  \\       /:/  /     \\:\\/:/  /  ",
-        "   \\/__/        \\:\\__\\     /:/  /       \\::/  /   ",
-        "                 \\/__/     \\/__/         \\/__/    "
+        "                 ___       ___           ___     ",
+        "     ___        /\\__\\     /\\__\\         /\\  \\    ",
+        "    /\\  \\      /:/  /    /::|  |       /::\\  \\   ",
+        "    \\:\\  \\    /:/  /    /:|:|  |      /:/\\ \\  \\  ",
+        "    /::\\__\\  /:/  /    /:/|:|__|__   _\\:\\~\\ \\  \\ ",
+        " __/:/\\/__/ /:/__/    /:/ |::::\\__\\ /\\ \\:\\ \\ \\__\\",
+        "/\\/:/  /    \\:\\  \\    \\/__/~~/:/  / \\:\\ \\:\\ \\/__/",
+        "\\::/__/      \\:\\  \\         /:/  /   \\:\\ \\:\\__\\  ",
+        " \\:\\__\\       \\:\\  \\       /:/  /     \\:\\/:/  /  ",
+        "  \\/__/        \\:\\__\\     /:/  /       \\::/  /   ",
+        "                \\/__/     \\/__/         \\/__/    "
     };
 
     cout << "";
@@ -101,12 +101,6 @@ void displayHeader() {
 
 // UTILITY: Dispaly TUI formatting
 void displayFormat(size_t iterations) {
-    for (size_t i = 0; i < iterations; i++) {
-        cout << '-';
-    } cout << '\n';
-}
-
-void displayNoSpaceFormat(size_t iterations) {
     for (size_t i = 0; i < iterations; i++) {
         cout << '-';
     }
@@ -1983,9 +1977,9 @@ public:
         displayHeader();
         cout << "-_-_-_-_-_-_-_-[TABLE OF CONTENTS]-_-_-_-_-_-_-_-\n";
         sleepAnimation(100);
-        displayNoSpaceFormat(19);
+        displayFormat(19);
         cout << " FUNCTIONS ";
-        displayNoSpaceFormat(19);
+        displayFormat(19);
         cout << '\n';
         sleepAnimation(100);
         cout << "  1. createBookfile() [C#1]\n";
@@ -2531,7 +2525,6 @@ public:
             cout << setw(9) << ' ' << "[13] | Exit\n" << flush;
             sleepAnimation(25);
             displayFormat(49);
-            cout << '\n' << flush;
             sleepAnimation(25);
             cout << ">> ";
             cin >> choice;
