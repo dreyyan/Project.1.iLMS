@@ -102,6 +102,12 @@ void displayFormat(size_t iterations) {
     } cout << '\n';
 }
 
+void displayNoSpaceFormat(size_t iterations) {
+    for (size_t i = 0; i < iterations; i++) {
+        cout << '-';
+    }
+}
+
 class Book { // Book Class
 protected:
     // Basic Information
@@ -1973,9 +1979,9 @@ public:
         displayHeader();
         cout << "-_-_-_-_-_-_-_-[TABLE OF CONTENTS]-_-_-_-_-_-_-_-\n";
         sleepAnimation(100);
-        displayFormat(19);
+        displayNoSpaceFormat(19);
         cout << " FUNCTIONS ";
-        displayFormat(19);
+        displayNoSpaceFormat(19);
         cout << '\n';
         sleepAnimation(100);
         cout << "  1. createBookfile() [C#1]\n";
@@ -1983,77 +1989,66 @@ public:
         cout << "   - creates a book file(.txt)\n";
         sleepAnimation(100);
         displayFormat(49);
-        cout << "\n";
         sleepAnimation(100);
         cout << "  2. inputBookInformation() [C#2]\n";
         sleepAnimation(100);
         cout << "   - stores book details inside bookfile\n";
         sleepAnimation(100);
         displayFormat(49);
-        cout << "\n";
         sleepAnimation(100);
         cout << "  3. readBookfile() [R]\n";
         sleepAnimation(100);
         cout << "   - reads book file line-by-line\n";
         sleepAnimation(100);
         displayFormat(49);
-        cout << "\n";
         sleepAnimation(100);
         cout << "  4. updateBookInformation() [U]\n";
         sleepAnimation(100);
         cout << "   - edits/updates book detail/information\n";
         sleepAnimation(100);
         displayFormat(49);
-        cout << "\n";
         sleepAnimation(100);
         cout << "  5. deleteBookfile() [D]\n";
         sleepAnimation(100);
         cout << "   - deletes book file\n";
         sleepAnimation(100);
         displayFormat(49);
-        cout << "\n";
         sleepAnimation(100);
         cout << "  6. showBooklist()\n";
         sleepAnimation(100);
         cout << "   - displays book list /w proper format\n";
         sleepAnimation(100);
         displayFormat(49);
-        cout << "\n";
         sleepAnimation(100);
         cout << "  7. borrowBook()\n";
         sleepAnimation(100);
         cout << "   - book is transferred to 'borrowed_books'\n";
         sleepAnimation(100);
         displayFormat(49);
-        cout << "\n";
         sleepAnimation(100);
         cout << "  8. returnBook()\n";
         sleepAnimation(100);
         cout << "   - book is transferred back to the 'main'\n";
         sleepAnimation(100);
         displayFormat(49);
-        cout << "\n";
         sleepAnimation(100);
         cout << "  9. searchBook()\n";
         sleepAnimation(100);
         cout << "   - locates book(if exists)\n";
         sleepAnimation(100);
         displayFormat(49);
-        cout << "\n";
         sleepAnimation(100);
         cout << "  10. printBorrowHistory()\n";
         sleepAnimation(100);
         cout << "   - prints transcript of borrow_history\n";
         sleepAnimation(100);
         displayFormat(49);
-        cout << "\n";
         sleepAnimation(100);
         cout << "  11. printReturnHistory()\n";
         sleepAnimation(100);
         cout << "   - prints transcript of return_history\n";
         sleepAnimation(100);
         displayFormat(49);
-        cout << "\n";
         sleepAnimation(100);
         cout << "  >> /exit\n";
         sleepAnimation(100);
@@ -2502,38 +2497,38 @@ public:
             // Prompt
             displayHeader();
             cout << "-_-_-_-_-_-_-_-_-[LIBRARY MENU]-_-_-_-_-_-_-_-_-\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             displayFormat(49);
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << " [1] | Create Book File\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << " [2] | Input Book Information\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << " [3] | Read Book File\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << " [4] | Update Book Information\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << " [5] | Delete Book File\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << " [6] | Show Booklist\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << " [7] | Borrow Book\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << " [8] | Return Book\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << " [9] | Search Book\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << "[10] | Borrow History\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << "[11] | Return History\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << "[12] | Table of Contents\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << setw(9) << ' ' << "[13] | Exit\n" << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             displayFormat(49);
             cout << '\n' << flush;
-            sleepAnimation(50);
+            sleepAnimation(25);
             cout << ">> ";
             cin >> choice;
 
