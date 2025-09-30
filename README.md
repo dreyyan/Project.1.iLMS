@@ -1,41 +1,26 @@
-# [ PROJECT DETAILS ]  
-**Project:** iLMS (iSort Library Management System)  
-**Project Code:** 0001  
-**Author:** dreyyan  
-**Language:** C++  
-**Date Started:** 10/29/2024  
-**Date Finished:** 11/01/2024
+# iLMS
+iSort Library Management System via C++ TUI  
+A beginner-friendly C++ application for practicing OOP concepts by simulating a library system with book management, borrowing/return tracking, and a text-based user interface.
 
-**iSort Library Management System (iLMS)** is a comprehensive, user-friendly, organized book management system that allows you to manage your book files instantly.
+## Installation
+Requires a C++ compiler (g++, MinGW, etc.).
 
-The purpose of iLMS is to manage book files instantly, utilizing functions that manipulate 
-book files according to the user’s interest. These functions are implemented with comprehensive 
-validation checks for input, both in navigation and information, ensuring little to no error while 
-using the system.
+```bash
+g++ -o iLMS main.cpp
+```
+Ensure required files are present:
+- borrow_history.txt
+- return_history.txt
+- txt_files/borrowed_books directory
 
-The primary use case for this program is to enable library staff to create books via “book files” 
-that act as virtual books, allowing them to manage borrows, returns, transaction history, and 
-inventory records. Although mainly for library staff, the iLMS can also be utilized for both 
-students and teachers, which helps to keep track of books at home and/or in school.
+## Usage
+Set the terminal size for best display:
+- Windows: mode con: cols=49 lines=20
+- Linux/macOS: adjust terminal size accordingly.
 
-**FEATURES**  
-✅ Uses text(.txt) files to store basic book information  
-✅ 12 features for book file manipulation(CRUD, view, search, history, etc.)  
-✅ Easy-to-use menu interface  
-
-**FUTURE IMPLEMENTATIONS**  
-🚀 Transition from .txt to .csv/.sql files for better book file manipulation & storage  
-🚀 Transition from CLI-based to desktop application /w improved UI  
-
-**UPDATES**  
-🔄 improved interface  
-🔄 reduced clutter code  
-🔄 faster animation(improve practicality)  
-
-# [ INSTRUCTIONS ]
-1. Set launch size (command prompt) to **49 x 20**.
-
-# [ DEVELOPER'S NOTES ]
-- If experiencing errors, make sure all necessary files are present.  
-
-- Files: borrow_history.txt, return_history.txt, txt_files(/borrowed_books)  
+Run:.
+```powershell
+/iLMS  # Linux/macOS
+iLMS.exe  # Windows
+```
+Navigate the menu to create, update, or delete book files, manage transactions, or search records.
